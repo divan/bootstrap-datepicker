@@ -69,7 +69,7 @@
 			}
 		}
 
-		$(document).on('mousedown', function (e) {
+		$(document).on('mousedown touchstart', function (e) {
 			// Clicked outside the datepicker, hide it
 			if ($(e.target).closest('.datepicker').length == 0) {
 				that.hide();
@@ -430,8 +430,7 @@
 									date: this.viewDate
 								});
 							}
-							this.showMode(-1);
-							this.fill();
+							this._setDate(UTCDate(year, 1, 1,0,0,0,0));
 						}
 						break;
 					case 'td':
@@ -659,7 +658,23 @@
 			months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
 			monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
 			today: "Today"
-		}
+		},
+		ru: {
+			days: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"],
+			daysShort: ["Вос", "Пон", "Вто", "Сре", "Чет", "Пят", "Суб", "Вос"],
+			daysMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
+			months: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+			monthsShort: ["Янв", "Фев", "Март", "Апр", "Май", "Июнь", "Июль", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+			today: "Сегодня"
+		},
+		ua: {
+			days: ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота", "Неділя"],
+			daysShort: ["Нед", "Пон", "Вів", "Сер", "Чет", "П'ят", "Суб", "Нед"],
+			daysMin: ["Нд", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Нд"],
+			months: ["Січень", "Лютий", "Березень", "Квітень", "Травень", "Червень", "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"],
+			monthsShort: ["Січ", "Лют", "Бер", "Кві", "Тра", "Чер", "Лип", "Сер", "Вер", "Жов", "Лис", "Гру"],
+			today: "Сьогодні"
+		},
 	}
 
 	var DPGlobal = {

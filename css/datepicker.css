@@ -272,3 +272,7 @@
   width: 16px;
   height: 16px;
 }
+.input-append.date .add-on,
+.input-prepend.date .add-on {
+    height: 20px;
+}
